@@ -17,6 +17,15 @@
       "email": "natalia@email.com",
       "followers": 51,
       "following": 7
+    },
+    {
+      "login": "joaofnr",
+      "id": 3,
+      "avatar_url": "https://avatars.githubusercontent.com/u/14279240?v=4",
+      "name": "João Nunes",
+      "email": "joaofnr@email.com",
+      "followers": 8,
+      "following": 11
     }
   ],
   "repos": [
