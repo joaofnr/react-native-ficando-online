@@ -3,10 +3,11 @@ import { Text, View, TouchableOpacity, TextInput, Alert } from 'react-native';
 import estilos from './estilos';
 import { salvarRepositorioDoUsuario } from '../../servicos/requisicoes/repositorios';
 import { deletarRepositorioDoUsuario } from '../../servicos/requisicoes/repositorios';
+import formatarData from '../../helpers/data';
 
 export default function InfoRepositorio({ route, navigation }) {
     const [nome, setNome] = useState(route.params.item.name);
-    const [data, setData] = useState(route.params.item.data);
+    const [data, setData] = useState(route.params.item.updated_at);
 
     async function salvar() {
         const resultado = await salvarRepositorioDoUsuario(
@@ -46,7 +47,7 @@ export default function InfoRepositorio({ route, navigation }) {
                 placeholder="Data de criação"
                 autoCapitalize="none"
                 style={estilos.entrada}
-                value={data}
+                value={formatarData(data)}
                 onChangeText={setData}
             />
             <TouchableOpacity 
