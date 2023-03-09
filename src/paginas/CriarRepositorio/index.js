@@ -18,7 +18,7 @@ export default function CriarRepositorio({ route, navigation }) {
             Alert.alert('Repositório criado')
             navigation.goBack()
         } else {
-            Alert.alert('Erro ao atualizar repositório')
+            Alert.alert('Erro ao criar repositório')
         }
     }
 
